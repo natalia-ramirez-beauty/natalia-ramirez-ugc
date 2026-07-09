@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kit & Portafolio - Natalia Ramírez</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons (Versión UMD altamente estable para evitar fallas globales) -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Chart.js para gráficos de estadísticas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                        },
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
+        .gradient-text {
+            background: linear-gradient(135deg, #f43f5e 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f43f5e 0%, #8b5cf6 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans transition-colors duration-300 dark:bg-darkBg dark:text-slate-100">
+
+    <!-- HEADER / NAV -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-100 dark:bg-darkBg/80 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-tight gradient-text">NATALIA RAMÍREZ</a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#sobre-mi" class="hover:text-primary-500 transition-colors">Sobre Mí</a>
+                <a href="#marcas" class="hover:text-primary-500 transition-colors">Marcas</a>
+                <a href="#metricas" class="hover:text-primary-500 transition-colors">Estadísticas</a>
+                <a href="#proyectos" class="hover:text-primary-500 transition-colors">Portafolio</a>
+                <a href="#tarifas" class="hover:text-primary-500 transition-colors">Servicios & Tarifas</a>
+                <a href="#contacto" class="hover:text-primary-500 transition-colors">Contacto</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Botón Modo Oscuro -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 focus:outline-none">
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                </button>
+                <a href="#contacto" class="gradient-bg text-white px-4 py-2 rounded-full text-xs sm:text-sm font-semibold hover:opacity-90 transition-opacity shadow-sm">
+                    Trabajemos Juntos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-12 md:py-20 overflow-hidden" id="sobre-mi">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Texto Hero -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 text-primary-700 dark:bg-primary-500/20 dark:text-primary-100 dark:border dark:border-primary-500/30">
+                        ✨ Beauty, Haircare & UGC Content Creator
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-slate-900 dark:text-white">
+                        Hola, soy <span class="gradient-text">Natalia Ramírez</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto lg:mx-0">
+                        Creadora de contenido profesional especializada en belleza y el cuidado saludable del cabello. Desarrollo videos UGC auténticos, con estética cuidada y natural, diseñados para generar confianza y conversiones reales para marcas cosméticas.
+                    </p>
+                    
+                    <!-- Redes Sociales Rápidas -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://www.instagram.com/itsnataliaramirez?igsh=MWp0ejNwenB5N3VveA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white dark:bg-darkCard px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-primary-500 transition-colors group">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-pink-600 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span class="text-sm font-semibold text-slate-900 dark:text-white">+2.2K seguidores</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@nataliaramirezz01?_t=ZN-90vnM1zcUCs&_r=1" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white dark:bg-darkCard px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-primary-500 transition-colors group">
+                            <svg class="w-5 h-5 fill-current text-slate-900 dark:text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-8.31 5.9 6.36 6.36 0 0 0 10.9 4.35V8.31a8.17 8.17 0 0 0 6.72 3.69v-3.4a4.82 4.82 0 0 1-1.05-1.91z"/>
+                            </svg>
+                            <span class="text-sm font-semibold text-slate-900 dark:text-white">+4.4K seguidores</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen Hero -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl group bg-slate-200 dark:bg-slate-800">
+                        <img src="media/Fotos/Foto_perfil.jpg" 
+                             alt="Natalia Ramírez - Perfil" 
+                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0"
+                             onerror="this.src='https://placehold.co/320x420/ffe4e6/f43f5e?text=Natalia+Ramírez'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <div class="absolute bottom-6 left-6 text-white z-20">
+                            <p class="font-bold text-xl">Natalia Ramírez</p>
+                            <p class="text-xs text-slate-200">Disponible para envíos de producto de forma global</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ESTADÍSTICAS Y AUDIENCIA -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800 transition-colors" id="metricas">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl">
+                    Estadísticas & <span class="gradient-text">Audiencia</span>
+                </h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    Métricas transparentes y una comunidad altamente interesada en recomendaciones de cuidado capilar sano, rutinas de skincare y reviews de belleza.
+                </p>
+            </div>
+
+            <!-- Grid de Tarjetas de Impacto -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-100 dark:border-slate-700 text-center">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-primary-500">6.4K</p>
+                    <p class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Audiencia Total</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-100 dark:border-slate-700 text-center">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-primary-500">12.1%</p>
+                    <p class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Tasa de Engagement</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-100 dark:border-slate-700 text-center">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-primary-500">11.2K</p>
+                    <p class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Impresiones / Mes</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-100 dark:border-slate-700 text-center">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-primary-500">90%</p>
+                    <p class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Audiencia Femenina</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Demográfico de Edad -->
+            <div class="max-w-3xl mx-auto">
+                <div class="p-6 bg-white dark:bg-darkCard rounded-3xl border border-slate-100 dark:border-slate-700">
+                    <h3 class="text-lg font-bold mb-4 text-slate-900 dark:text-white text-center">Distribución de Edad (%)</h3>
+                    <div class="h-64 relative">
+                        <canvas id="ageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO DE TRABAJOS PREVIOS -->
+    <section class="py-16" id="proyectos">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl">
+                    Campañas & <span class="gradient-text">Portafolio</span>
+                </h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    Explora mi contenido segmentado. Me especializo en videos dinámicos para redes, pero también produzco fotografía estética de producto.
+                </p>
+            </div>
+
+            <!-- Selector de Categoría del Portafolio -->
+            <div class="flex justify-center mb-10">
+                <div class="bg-white dark:bg-darkCard p-1.5 rounded-2xl flex flex-wrap justify-center gap-1 border border-slate-200 dark:border-slate-700 shadow-sm max-w-fit">
+                    <button id="btn-portfolio-hair" onclick="setPortfolioCategory('cabello')" class="px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 bg-primary-500 text-white shadow-sm">
+                        🧴 Videos Cabello
+                    </button>
+                    <button id="btn-portfolio-beauty" onclick="setPortfolioCategory('belleza')" class="px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        💄 Videos Belleza
+                    </button>
+                    <button id="btn-portfolio-photos" onclick="setPortfolioCategory('fotos')" class="px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        📸 Fotos UGC
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grids de Contenido del Portafolio -->
+            <div class="relative min-h-[400px]">
+                
+                <!-- PORTAFOLIO CABELLO (VIDEOS) -->
+                <div id="portfolio-grid-hair" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-opacity duration-300">
+                    <!-- Tarjeta Cabello 1 (GROWUS) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/Video%20del%20cabello/GROWUS.mp4" type="video/mp4">
+                                <source src="GROWUS.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-rose-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video UGC</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Protector Térmico - GROWUS</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 line-clamp-4">
+                                    Protección contra el calor: proporciona una fuerte barrera protectora contra los daños causados por el calor de herramientas de peinado como secadores y alisadores de cabello, manteniendo el cabello sano y elástico.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Formato</span>
+                                    <span class="text-slate-900 dark:text-white">Vertical 9:16</span>
+                                </div>
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Plataforma</span>
+                                    <span class="text-slate-900 dark:text-white">TikTok / Reels</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Cabello 2 (Lilyeve) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/Video%20del%20cabello/Lilyeve.mp4" type="video/mp4">
+                                <source src="Lilyeve.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-rose-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video UGC</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tratamiento de Raíz - Lilyeve</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                                    Aplicación detallada de sérum capilar con aplicador especial. Tomas close-up que demuestran la correcta técnica de uso directo en el cuero cabelludo.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Objetivo</span>
+                                    <span class="text-slate-900 dark:text-white">Conversión / Educativo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Cabello 3 (Cerave 2in1) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/Video%20del%20cabello/Cerave_2in1.mp4" type="video/mp4">
+                                <source src="media/Video del cabello/Cerave_3in1.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-rose-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video UGC</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Rutina de Lavado - CeraVe</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                                    Tutorial dinámico bajo el agua mostrando la rica textura y la técnica de lavado con producto 2 en 1. Ideal para retener a la audiencia y demostrar espuma.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Estilo</span>
+                                    <span class="text-slate-900 dark:text-white">In-Shower / Textura</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAFOLIO BELLEZA & SKINCARE (VIDEOS) -->
+                <div id="portfolio-grid-beauty" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-opacity duration-300 hidden">
+                    <!-- Tarjeta Belleza 1 (Maquillaje) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/video%20de%20Belleza/maquillaje.mp4" type="video/mp4">
+                                <source src="maquillaje.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-purple-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video UGC</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Look de Maquillaje Glow</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                                    Tutorial en video dinámico. Aplicación paso a paso de base y corrector mostrando un acabado natural y perfecto en cámara. Ideal para retener atención.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Objetivo</span>
+                                    <span class="text-slate-900 dark:text-white">Tutorial Ads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Belleza 2 (Deep Toner) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/video%20de%20Belleza/DeepToner.mp4" type="video/mp4">
+                                <source src="DeepToner.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-purple-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video Rutina</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Rutina Hidratación Nocturna</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                                    Video narrando el proceso de hidratación paso a paso con ácido hialurónico de baja molécula. Demostración de uso y texturas.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Estilo</span>
+                                    <span class="text-slate-900 dark:text-white">Night Routine (Skincare)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Belleza 3 (Toner Purito) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+                        <div class="w-full relative bg-black h-[480px]">
+                            <video autoplay loop muted playsinline controls class="absolute inset-0 w-full h-full object-cover">
+                                <source src="media/video%20de%20Belleza/Toner_purito.mp4" type="video/mp4">
+                                <source src="Toner_purito.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <span class="absolute top-4 left-4 bg-purple-600 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">Video Review</span>
+                        </div>
+                        <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Review: Toner Purito</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                                    Video UGC tipo review honesto mostrando de cerca el producto, su consistencia y los beneficios en la piel (Oat-in Silky Toner).
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-100 dark:border-slate-700 pt-4 flex justify-between items-center text-xs font-semibold">
+                                <div>
+                                    <span class="text-slate-400 block font-normal">Estilo</span>
+                                    <span class="text-slate-900 dark:text-white">Testimonio (Talking Head)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAFOLIO FOTOGRAFÍA UGC -->
+                <div id="portfolio-grid-photos" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-opacity duration-300 hidden">
+                    
+                    <!-- Tarjeta Foto 1 (Kundal) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+                        <div class="h-72 overflow-hidden relative">
+                            <img src="media/Fotos/KundalUGC.jpg" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x300/ffe4e6/f43f5e?text=Kundal+UGC';"
+                                 alt="Foto Producto Kundal"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-slate-900 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">Foto Producto</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Estética de Producto - Kundal</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300">Fotografía de alta calidad mostrando el envase y la identidad visual de la marca. Ideal para catálogos, feed de Instagram y banners comerciales.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Foto 2 (Deep Toner) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+                        <div class="h-72 overflow-hidden relative">
+                            <img src="media/Fotos/DeepToner.jpg" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x300/ffe4e6/f43f5e?text=Deep+Toner';"
+                                 alt="Skincare Deep Toner"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-slate-900 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">Foto Textura</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Texturas - Deep Toner</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300">Enfoque macro y estético para demostrar la consistencia, ligereza y frescura del producto. Perfecto para generar confianza en la fórmula.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Foto 3 (Lifestyle) -->
+                    <div class="bg-white dark:bg-darkCard rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+                        <div class="h-72 overflow-hidden relative">
+                            <img src="media/Fotos/Grainon.jpg" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x300/ffe4e6/f43f5e?text=Lifestyle+Product';"
+                                 alt="Retrato Lifestyle"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-slate-900 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full">Foto Lifestyle</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Uso del Producto (Lifestyle)</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300">Fotografía natural aplicándose el producto o mostrando el cabello sano como resultado final. Crea una conexión inmediata con la audiencia real.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN MARCAS COLABORADORAS -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-900 transition-colors" id="marcas">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl uppercase tracking-wide">
+                    Marcas con que he <span class="gradient-text">Colaborado</span>
+                </h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    He tenido el privilegio de trabajar con marcas destacadas en la industria, creando contenido de alto impacto, enfocado en mostrar resultados reales y estética profesional.
+                </p>
+            </div>
+
+            <!-- Grid de Marcas: Tarjetas Estilo Identidad Corporativa Real -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-6">
+                
+                <!-- Marca 1: KUNDAL -->
+                <div class="bg-[#2D211C] text-[#EAD8D0] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold text-[#EAD8D0]/60 mb-1">PREMIUM HAIRCARE</span>
+                    <span class="text-2xl font-serif font-semibold tracking-[0.1em] text-white">KUNDAL</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-30">@kundal.official</div>
+                </div>
+
+                <!-- Marca 2: PURITO -->
+                <div class="bg-[#E6EDE4] text-[#2F4F3F] dark:bg-[#1E2922] dark:text-[#E2EDE5] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold text-[#4E7661] dark:text-[#A7C8B6] mb-1">HEALTH/BEAUTY</span>
+                    <span class="text-xl font-bold tracking-[0.25em] uppercase font-sans">PURITO</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-45">@purito_official</div>
+                </div>
+
+                <!-- Marca 3: CERAVE -->
+                <div class="bg-white text-[#0E529E] dark:bg-[#0C1220] dark:text-[#2196F3] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/10 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold text-slate-400 mb-1">SKINCARE</span>
+                    <div class="flex items-baseline space-x-0.5">
+                        <span class="text-3xl font-black tracking-tight font-sans">CeraVe</span>
+                    </div>
+                    <div class="h-1 w-12 bg-[#33A248] rounded-full mt-2"></div>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-45">@cerave</div>
+                </div>
+
+                <!-- Marca 4: ABIB -->
+                <div class="bg-black text-white dark:bg-white dark:text-black h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[8px] uppercase tracking-[0.4em] font-light opacity-45 mb-1">MINIMALIST COSMETICS</span>
+                    <span class="text-2xl font-light tracking-[0.35em] uppercase font-sans pl-1">Abib</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-30">@abib.global</div>
+                </div>
+
+                <!-- Marca 5: AGE 20'S -->
+                <div class="bg-[#FAF2EE] text-[#7C5A4D] dark:bg-[#251A15] dark:text-[#EBD8CE] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-[#A87E6D] mb-1">GLOW CUSHION / K-BEAUTY</span>
+                    <span class="text-2xl font-serif font-extrabold tracking-[0.12em] uppercase">AGE 20's</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-40">@age20s_global</div>
+                </div>
+
+                <!-- Marca 6: BEAUTY OF JOSEON -->
+                <div class="bg-[#F8F5F0] text-[#423D37] dark:bg-[#1C1916] dark:text-[#EDE8E0] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-[#7D766F] mb-1.5">HEALTH/BEAUTY</span>
+                    <span class="text-sm sm:text-base font-serif font-semibold tracking-[0.08em] uppercase text-center leading-tight">BEAUTY OF<br>JOSEON</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-40">@beautyofjoseon_official</div>
+                </div>
+
+                <!-- Marca 7: LILYEVE -->
+                <div class="bg-[#F7EFFF] text-[#5E2B97] dark:bg-[#1E112E] dark:text-[#D1ADFF] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-[#8A53CC] mb-1.5">HAIR HABIT</span>
+                    <span class="text-2xl font-sans font-black italic tracking-wide lowercase">lilyeve</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-45">@lilyeve.kr</div>
+                </div>
+
+                <!-- Marca 8: UNI&CORE -->
+                <div class="bg-[#F4F4F4] text-[#1D1D1F] dark:bg-[#111111] dark:text-[#E4E4E7] h-36 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-slate-200/5 hover:shadow-md transition-all hover:scale-105 group p-6 relative overflow-hidden">
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold text-slate-400 dark:text-slate-500 mb-1">HEALTH/BEAUTY</span>
+                    <span class="text-2xl font-sans font-black tracking-wider uppercase">UNI&CORE</span>
+                    <div class="absolute bottom-2 text-[8px] tracking-widest uppercase opacity-45">@unincore.official</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COTIZADOR & SERVICIOS INTERACTIVOS -->
+    <section class="py-16 bg-white dark:bg-darkCard border-t border-slate-100 dark:border-slate-800 transition-colors" id="tarifas">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl">
+                    Tarifas & <span class="gradient-text">Cotizador Flexible</span>
+                </h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    Ofrezco tarifas profesionales sumamente competitivas y accesibles. Selecciona si deseas contenido <strong>UGC</strong> para tu marca o <strong>Publicación directa</strong> en mis redes (Instagram y TikTok).
+                </p>
+            </div>
+
+            <!-- Toggle de Tipo de Contenido -->
+            <div class="flex flex-col items-center gap-4 mb-10">
+                <div class="bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl flex space-x-1 border border-slate-200 dark:border-slate-700">
+                    <button id="btn-contentType-ugc" onclick="setContentType('ugc')" class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 bg-white text-slate-900 dark:bg-darkCard dark:text-white shadow-sm">
+                        🎥 Contenido UGC (Uso de Marca)
+                    </button>
+                    <button id="btn-contentType-redes" onclick="setContentType('redes')" class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        📣 Publicar en mis Redes (1 Plataforma)
+                    </button>
+                </div>
+
+                <!-- Selector de plataforma específica -->
+                <div id="platform-selector-wrapper" class="flex justify-center transition-all duration-300 hidden">
+                    <div class="flex items-center space-x-3 bg-rose-50 dark:bg-rose-950/20 px-4 py-2 rounded-2xl border border-rose-100 dark:border-rose-900/30">
+                        <span class="text-xs font-semibold text-rose-700 dark:text-rose-300">Selecciona plataforma (se sube a una, no a ambas):</span>
+                        <div class="flex bg-white dark:bg-darkCard p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <button id="btn-platform-ig" onclick="setPlatform('instagram')" class="px-3 py-1 rounded-lg text-xs font-bold transition-all bg-primary-500 text-white">Instagram</button>
+                            <button id="btn-platform-tt" onclick="setPlatform('tiktok')" class="px-3 py-1 rounded-lg text-xs font-bold transition-all text-slate-500 dark:text-slate-400">TikTok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Opciones de Cotización (Izquierda) -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Sección de Combos (Ahorro) -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-3xl border border-slate-150 dark:border-slate-700">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-primary-500"></i> Paquetes de Videos Combo (Mejor Valor)
+                            </h3>
+                            <span class="text-xs bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 font-bold px-2 py-1 rounded-full">Ahorro Inteligente</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="combos-grid">
+                            <!-- Combo de 2 -->
+                            <div id="combo-card-combo2" onclick="selectPricingOption('combo2')" class="p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <span class="text-xs font-bold text-primary-500">COMBO DUO</span>
+                                        <span class="text-xs font-bold text-green-500">-15%</span>
+                                    </div>
+                                    <h4 id="title-combo2" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">Combo de 2</h4>
+                                    <p id="desc-combo2" class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">2 Videos enfocados en producto o tutoriales</p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700">
+                                    <p class="text-xs text-slate-400">Total</p>
+                                    <span id="price-combo2" class="font-extrabold text-lg text-primary-500">$200 USD</span>
+                                </div>
+                            </div>
+
+                            <!-- Combo de 4 -->
+                            <div id="combo-card-combo4" onclick="selectPricingOption('combo4')" class="p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all flex flex-col justify-between relative">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-500 text-white text-[9px] font-extrabold tracking-widest px-2.5 py-0.5 rounded-full uppercase shadow text-center whitespace-nowrap select-none">Popular</div>
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <span class="text-xs font-bold text-primary-500">COMBO ESSENTIAL</span>
+                                        <span class="text-xs font-bold text-green-500">-20%</span>
+                                    </div>
+                                    <h4 id="title-combo4" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">Combo de 4</h4>
+                                    <p id="desc-combo4" class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">4 Videos ideales para pautas o lanzamientos</p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700">
+                                    <p class="text-xs text-slate-400">Total</p>
+                                    <span id="price-combo4" class="font-extrabold text-lg text-primary-500">$380 USD</span>
+                                </div>
+                            </div>
+
+                            <!-- Combo de 7 -->
+                            <div id="combo-card-combo7" onclick="selectPricingOption('combo7')" class="p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <span class="text-xs font-bold text-primary-500">COMBO PRO</span>
+                                        <span class="text-xs font-bold text-green-500">-25%</span>
+                                    </div>
+                                    <h4 id="title-combo7" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">Combo de 7</h4>
+                                    <p id="desc-combo7" class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">7 Videos para cubrir un mes de pauta publicitaria</p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700">
+                                    <p class="text-xs text-slate-400">Total</p>
+                                    <span id="price-combo7" class="font-extrabold text-lg text-primary-500">$630 USD</span>
+                                </div>
+                            </div>
+
+                            <!-- Combo Publicitario -->
+                            <div id="combo-card-comboAds" onclick="selectPricingOption('comboAds')" class="p-4 bg-gradient-to-b from-primary-50 to-white dark:bg-none dark:bg-slate-800 rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all flex flex-col justify-between relative ring-1 ring-primary-500/20 shadow-md">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-500 to-purple-600 text-white text-[9px] font-extrabold tracking-widest px-3 py-0.5 rounded-full uppercase shadow text-center whitespace-nowrap select-none flex items-center gap-1">
+                                    <i data-lucide="rocket" class="w-3 h-3"></i> MÁXIMO ROI
+                                </div>
+                                <div class="mt-1.5">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <span class="text-xs font-bold text-primary-500">PERFORMANCE ADS</span>
+                                        <span class="text-[10px] font-bold text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/40 px-1.5 py-0.5 rounded">+90 DÍAS</span>
+                                    </div>
+                                    <h4 id="title-comboAds" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">Combo Performance Ads</h4>
+                                    <p id="desc-comboAds" class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">3 Videos UGC gancho + Derechos de uso publicitario digital por 90 días</p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700">
+                                    <p class="text-xs text-slate-400">Total</p>
+                                    <span id="price-comboAds" class="font-extrabold text-lg text-primary-500">$490 USD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Entregables Individuales -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-3xl border border-slate-150 dark:border-slate-700 space-y-3">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-2">
+                            <i data-lucide="layers" class="w-5 h-5 text-primary-500"></i> O Entregables Individuales
+                        </h3>
+                        
+                        <!-- Video Individual -->
+                        <div id="item-row-video" onclick="selectPricingOption('video')" class="flex items-center justify-between p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all">
+                            <div class="flex items-center space-x-3">
+                                <div id="radio-video" class="w-5 h-5 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center"></div>
+                                <div>
+                                    <p id="title-individual-video" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">1 Video UGC (30-60s)</p>
+                                    <p id="desc-individual-video" class="text-xs text-slate-500 dark:text-slate-400">Formato dinámico, unboxing, textura o rutina capilar</p>
+                                </div>
+                            </div>
+                            <span id="price-individual-video" class="font-bold text-primary-500 text-sm sm:text-base">$120 USD</span>
+                        </div>
+
+                        <!-- Stories Individual -->
+                        <div id="item-row-stories" onclick="selectPricingOption('stories')" class="flex items-center justify-between p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all">
+                            <div class="flex items-center space-x-3">
+                                <div id="radio-stories" class="w-5 h-5 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center"></div>
+                                <div>
+                                    <p id="title-individual-stories" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Secuencia de Stories (x3)</p>
+                                    <p id="desc-individual-stories" class="text-xs text-slate-500 dark:text-slate-400">Rutina paso a paso o review con stickers de enlace directo</p>
+                                </div>
+                            </div>
+                            <span id="price-individual-stories" class="font-bold text-primary-500 text-sm sm:text-base">$50 USD</span>
+                        </div>
+
+                        <!-- Foto Individual -->
+                        <div id="item-row-photo" onclick="selectPricingOption('photo')" class="flex items-center justify-between p-4 bg-white dark:bg-darkCard rounded-2xl border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all">
+                            <div class="flex items-center space-x-3">
+                                <div id="radio-photo" class="w-5 h-5 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center"></div>
+                                <div>
+                                    <p id="title-individual-photo" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Foto / Carrusel Estético de Producto</p>
+                                    <p id="desc-individual-photo" class="text-xs text-slate-500 dark:text-slate-400">Enfoque en texturas, envase y estética limpia minimalista</p>
+                                </div>
+                            </div>
+                            <span id="price-individual-photo" class="font-bold text-primary-500 text-sm sm:text-base">$40 USD</span>
+                        </div>
+                    </div>
+
+                    <!-- Extras de Licencias / Ads -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-3xl border border-slate-150 dark:border-slate-700">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-3">Opciones y Licencias Adicionales</h4>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div id="whitelisting-wrapper" class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white dark:bg-darkCard rounded-2xl border border-slate-200 dark:border-slate-700 gap-4 transition-opacity">
+                                <div class="space-y-1">
+                                    <span class="font-semibold block text-slate-900 dark:text-white">Whitelisting / Paid Ads (Derechos de Pauta)</span>
+                                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Derechos exclusivos de uso publicitario digital para videos individuales o combos de ahorro</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <select id="extra-whitelisting" class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 text-slate-900 dark:text-white" onchange="calculateTotal()">
+                                        <option value="0">Sin derechos (0%)</option>
+                                        <option value="30">Uso por 30 días (+10%)</option>
+                                        <option value="90">Uso por 90 días (+20%)</option>
+                                    </select>
+                                    <div id="whitelisting-status-badge" class="hidden text-xs bg-green-100 text-green-700 dark:bg-green-950/40 dark:text-green-300 px-3 py-1.5 rounded-xl font-bold whitespace-nowrap">
+                                        ¡Incluido (30 días)!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen de Propuesta (Derecha) -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 text-white p-8 rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
+                    <!-- Decoración de fondo -->
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-primary-500/10 rounded-full blur-2xl"></div>
+
+                    <h3 class="text-lg font-bold">Resumen de Campaña</h3>
+                    
+                    <div class="space-y-4 text-sm">
+                        <!-- Tipo de Contenido Activo -->
+                        <div class="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span class="text-slate-400 text-xs">Esquema de Campaña:</span>
+                            <span id="summary-content-type" class="font-bold text-primary-200 uppercase text-xs tracking-wider">UGC (Uso de Marca)</span>
+                        </div>
+
+                        <!-- Entregable Principal -->
+                        <div class="pt-2">
+                            <p class="text-xs text-slate-400 uppercase tracking-wider mb-2">Entregable Seleccionado:</p>
+                            <div class="flex justify-between items-start">
+                                <div id="summary-main-item">
+                                    <span class="font-semibold">Combo Crecimiento (4 Videos)</span>
+                                </div>
+                                <span id="summary-main-price" class="font-bold text-slate-300">$380 USD</span>
+                            </div>
+                        </div>
+
+                        <!-- Adicionales Dinámicos -->
+                        <div id="summary-extras-section" class="border-t border-slate-800 pt-3 space-y-2 hidden">
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Servicios Extras:</p>
+                            <div id="summary-extras-list" class="space-y-2">
+                                <!-- Llenado por JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-800 pt-4 flex justify-between items-end">
+                        <div>
+                            <p class="text-xs text-slate-400">Inversión Estimada</p>
+                            <p class="text-3xl font-extrabold text-white mt-1" id="total-price">$380 USD</p>
+                        </div>
+                        <span class="text-xs text-slate-400 font-semibold">Precios Netos</span>
+                    </div>
+
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        * Las tarifas para <strong>Publicación en Redes</strong> incluyen acceso directo orgánico a mi comunidad de +2.2K seguidores en Instagram y +4.4K en TikTok (el contenido se subirá exclusivamente a la plataforma seleccionada, no a ambas). Las tarifas <strong>UGC</strong> conceden los derechos de propiedad intelectual del material multimedia para las plataformas de la marca.
+                    </p>
+
+                    <button onclick="copyQuote()" class="w-full bg-white text-slate-950 font-bold py-3 px-4 rounded-2xl flex items-center justify-center space-x-2 hover:bg-slate-100 transition-colors">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span>Copiar Propuesta Cotizada</span>
+                    </button>
+                    <div id="copy-message" class="text-xs text-center text-green-400 font-semibold hidden">¡Propuesta copiada en el portapapeles!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-900 transition-colors" id="contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white dark:bg-darkCard p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800">
+                
+                <!-- Info de contacto -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                        ¿Trabajamos en <span class="gradient-text">tu Marca?</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Escríbeme para solicitar tu paquete personalizado de contenido UGC para tus redes sociales o pautas comerciales en Instagram y TikTok.
+                    </p>
+
+                    <div class="space-y-4 pt-4 text-sm">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-2 bg-slate-50 dark:bg-slate-800 rounded-xl text-primary-500">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-xs">Correo Electrónico Directo</p>
+                                <a href="mailto:contact.nataliaramirez@gmail.com" class="font-semibold text-slate-900 dark:text-white hover:underline">contact.nataliaramirez@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1" for="name">Nombre / Marca</label>
+                                <input class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500" id="name" type="text" placeholder="Tu marca o agencia" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1" for="email">Correo Electrónico</label>
+                                <input class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500" id="email" type="email" placeholder="nombre@correo.com" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1" for="budget">Presupuesto Estimado (USD)</label>
+                            <select class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow text-slate-900 dark:text-white" id="budget">
+                                <option>$150 - $500 USD</option>
+                                <option>$500 - $1,500 USD</option>
+                                <option>$1,500 - $3,000 USD</option>
+                                <option>Más de $3,000 USD</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1" for="message">Detalles del Proyecto / Entregables</label>
+                            <textarea class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow h-28 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500" id="message" placeholder="Escribe los detalles de la campaña, objetivos de contenido UGC, fechas previstas de publicación o uso publicitario..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 px-6 rounded-xl hover:opacity-95 transition-opacity shadow-lg">
+                            Enviar Propuesta Comercial
+                        </button>
+                    </form>
+
+                    <!-- Mensaje Éxito del Formulario -->
+                    <div id="form-success-msg" class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/30 text-green-600 dark:text-green-400 rounded-2xl text-center text-sm font-semibold">
+                        🎉 ¡Formulario enviado con éxito! Natalia o su mánager te responderá en un plazo máximo de 24 a 48 horas.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h3 class="text-xl font-extrabold tracking-tight gradient-text">NATALIA RAMÍREZ</h3>
+            <p class="text-sm max-w-md mx-auto">
+                Especialista en contenido estético capilar y creadora de contenido UGC de alto impacto de conversión para marcas de cosmética y cuidado capilar.
+            </p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="https://www.instagram.com/itsnataliaramirez?igsh=MWp0ejNwenB5N3VveA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    Instagram
+                </a>
+                <a href="https://www.tiktok.com/@nataliaramirezz01?_t=ZN-90vnM1zcUCs&_r=1" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-8.31 5.9 6.36 6.36 0 0 0 10.9 4.35V8.31a8.17 8.17 0 0 0 6.72 3.69v-3.4a4.82 4.82 0 0 1-1.05-1.91z"/></svg>
+                    TikTok
+                </a>
+            </div>
+            <div class="border-t border-slate-800 pt-6 text-xs text-slate-500">
+                &copy; <span id="year"></span> Natalia Ramírez. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC / SCRIPTS -->
+    <script>
+        // Inicializar Iconos Lucide
+        lucide.createIcons();
+
+        // Actualizar año del copyright
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Control de Modo Oscuro
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        // Cargar preferencia guardada si existe
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        /* ========================================================
+           SISTEMA DE TABS PARA EL PORTAFOLIO (3 Categorías)
+           ======================================================== */
+        function setPortfolioCategory(category) {
+            const grids = {
+                'cabello': document.getElementById('portfolio-grid-hair'),
+                'belleza': document.getElementById('portfolio-grid-beauty'),
+                'fotos': document.getElementById('portfolio-grid-photos')
+            };
+            const btns = {
+                'cabello': document.getElementById('btn-portfolio-hair'),
+                'belleza': document.getElementById('btn-portfolio-beauty'),
+                'fotos': document.getElementById('btn-portfolio-photos')
+            };
+
+            // Ocultar todos los grids y resetear estilos de botones
+            for (let key in grids) {
+                if (grids[key]) grids[key].classList.add('hidden');
+                if (btns[key]) btns[key].className = "px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+            }
+
+            // Mostrar el grid seleccionado y activar su botón
+            if (grids[category]) grids[category].classList.remove('hidden');
+            if (btns[category]) btns[category].className = "px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 bg-primary-500 text-white shadow-sm";
+        }
+
+        /* ========================================================
+           SISTEMA DE TARIFAS Y COTIZADOR INTERACTIVO UNIFICADO
+           ======================================================== */
+        
+        // Estado del Cotizador
+        let currentContentType = 'ugc'; // 'ugc' o 'redes'
+        let currentSelection = 'combo4'; // Opción seleccionada por defecto
+        let selectedPlatform = 'instagram'; // 'instagram' o 'tiktok' (para redes)
+
+        // Matriz de Precios según Tipo de Contenido (Tarifas 100% Unificadas y Simétricas)
+        const pricingData = {
+            ugc: {
+                combo2: { title: "Combo de 2 Videos (UGC)", desc: "2 Videos UGC enfocados en demostración capilar y estética de texturas", price: 200, hasBuiltInAds: false },
+                combo4: { title: "Combo de 4 Videos (UGC + Ads)", desc: "4 Videos UGC estéticos. ¡Incluye derechos de pauta publicitaria (Ads) por 30 días!", price: 410, hasBuiltInAds: true, adsDays: 30 },
+                combo7: { title: "Combo de 7 Videos (UGC + Ads)", desc: "7 Videos UGC de alto impacto. ¡Incluye derechos de pauta publicitaria (Ads) por 90 días!", price: 730, hasBuiltInAds: true, adsDays: 90 },
+                comboAds: { title: "Combo Performance Ads", desc: "3 Videos UGC gancho (optimizados para pauta) + Derechos de uso publicitario digital por 90 días", price: 490, hasBuiltInAds: true, adsDays: 90 },
+                video: { title: "1 Video UGC Individual", desc: "Video UGC dinámico con guion de retención, demostración de uso y close-ups", price: 120, hasBuiltInAds: false },
+                stories: { title: "Secuencia de Stories UGC (x3)", desc: "3 Videos verticales estilo Story listos para pautas de retargeting", price: 50, hasBuiltInAds: false },
+                photo: { title: "Fotografía Estética UGC", desc: "Foto de alta resolución enfocada en la estética del producto y su aplicación", price: 40, hasBuiltInAds: false }
+            },
+            instagram: {
+                combo2: { title: "Combo de 2 (Dúo en Instagram)", desc: "2 Reels publicados con hashtags estratégicos y audio en tendencia", price: 250, hasBuiltInAds: false },
+                combo4: { title: "Combo de 4 (Crecimiento IG + Ads)", desc: "4 Reels publicados en mi feed de IG. ¡Incluye Spark/Partnership Ads por 30 días!", price: 550, hasBuiltInAds: true, adsDays: 30 },
+                combo7: null, // Oculto para pautas publicadas directas
+                comboAds: { title: "Combo Ads (Instagram)", desc: "3 Reels publicados en IG + Derechos de Partnership Ads incluidos por 90 días", price: 490, hasBuiltInAds: true, adsDays: 90 },
+                video: { title: "1 Reel de Instagram Publicado", desc: "1 Reel estético publicado en mi feed principal con precio base optimizado", price: 150, hasBuiltInAds: false },
+                stories: { title: "Secuencia de Stories en Instagram (x3)", desc: "Secuencia de 3 Stories de IG con sticker de enlace de compra directo", price: 60, hasBuiltInAds: false },
+                photo: { title: "Post de Carrusel en Instagram", desc: "Carrusel estético de fotos reales de cabello y producto", price: 50, hasBuiltInAds: false }
+            },
+            tiktok: {
+                combo2: { title: "Combo de 2 (Dúo en TikTok)", desc: "2 Videos publicados en mi perfil de TikTok usando audios y dinámicas virales", price: 250, hasBuiltInAds: false },
+                combo4: { title: "Combo de 4 (Crecimiento TT + Ads)", desc: "4 Videos publicados en mi feed de TikTok. ¡Incluye Spark Ads por 30 días!", price: 550, hasBuiltInAds: true, adsDays: 30 },
+                combo7: null, // Oculto para pautas publicadas directas
+                comboAds: { title: "Combo Spark Ads (TikTok)", desc: "3 Videos publicados en TikTok + Derechos de Spark Ads incluidos por 90 días", price: 490, hasBuiltInAds: true, adsDays: 90 },
+                video: { title: "1 Video de TikTok Publicado", desc: "1 TikTok dinámico y orgánico publicado en mi perfil con precio base optimizado", price: 150, hasBuiltInAds: false },
+                stories: { title: "Secuencia de Stories en TikTok (x3)", desc: "Secuencia de 3 Stories de belleza publicadas en mi perfil de TikTok", price: 60, hasBuiltInAds: false },
+                photo: { title: "Foto / Carrusel de Fotos en TikTok", desc: "Carrusel de fotos estéticas de cabello y rutina publicado en mi feed de TikTok", price: 50, hasBuiltInAds: false }
+            }
+        };
+
+        function getActivePricingBlock() {
+            if (currentContentType === 'ugc') {
+                return pricingData.ugc;
+            } else {
+                return pricingData[selectedPlatform];
+            }
+        }
+
+        function setContentType(type) {
+            currentContentType = type;
+
+            const btnUgc = document.getElementById('btn-contentType-ugc');
+            const btnRedes = document.getElementById('btn-contentType-redes');
+            const platformSelector = document.getElementById('platform-selector-wrapper');
+            const combo7Card = document.getElementById('combo-card-combo7');
+            const combosGrid = document.getElementById('combos-grid');
+
+            if (type === 'ugc') {
+                btnUgc.className = "px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 bg-white text-slate-900 dark:bg-darkCard dark:text-white shadow-sm";
+                btnRedes.className = "px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+                document.getElementById('summary-content-type').innerText = "UGC (Uso de Marca)";
+                platformSelector.classList.add('hidden');
+                
+                if (combo7Card) combo7Card.classList.remove('hidden');
+                if (combosGrid) {
+                    combosGrid.classList.remove('lg:grid-cols-3');
+                    combosGrid.classList.add('lg:grid-cols-4');
+                }
+            } else {
+                btnRedes.className = "px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 bg-white text-slate-900 dark:bg-darkCard dark:text-white shadow-sm";
+                btnUgc.className = "px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+                document.getElementById('summary-content-type').innerText = `Publicado en ${selectedPlatform === 'instagram' ? 'Instagram' : 'TikTok'}`;
+                platformSelector.classList.remove('hidden');
+
+                if (currentSelection === 'combo7') {
+                    selectPricingOption('combo4');
+                }
+                
+                if (combo7Card) combo7Card.classList.add('hidden');
+                if (combosGrid) {
+                    combosGrid.classList.remove('lg:grid-cols-4');
+                    combosGrid.classList.add('lg:grid-cols-3');
+                }
+            }
+
+            updatePricingDOM();
+            calculateTotal();
+        }
+
+        function setPlatform(platform) {
+            selectedPlatform = platform;
+            const btnIg = document.getElementById('btn-platform-ig');
+            const btnTt = document.getElementById('btn-platform-tt');
+
+            if (platform === 'instagram') {
+                btnIg.className = "px-3 py-1 rounded-lg text-xs font-bold transition-all bg-primary-500 text-white";
+                btnTt.className = "px-3 py-1 rounded-lg text-xs font-bold transition-all text-slate-500 dark:text-slate-400";
+                document.getElementById('summary-content-type').innerText = "Publicado en Instagram";
+            } else {
+                btnTt.className = "px-3 py-1 rounded-lg text-xs font-bold transition-all bg-primary-500 text-white";
+                btnIg.className = "px-3 py-1 rounded-lg text-xs font-bold transition-all text-slate-500 dark:text-slate-400";
+                document.getElementById('summary-content-type').innerText = "Publicado en TikTok";
+            }
+
+            updatePricingDOM();
+            calculateTotal();
+        }
+
+        function selectPricingOption(optionKey) {
+            currentSelection = optionKey;
+            
+            const keys = ['combo2', 'combo4', 'combo7', 'comboAds', 'video', 'stories', 'photo'];
+            keys.forEach(k => {
+                const cardEl = document.getElementById(`combo-card-${k}`) || document.getElementById(`item-row-${k}`);
+                const radioOrBorder = document.getElementById(`radio-${k}`);
+
+                if (cardEl) {
+                    cardEl.classList.remove('border-primary-500', 'ring-1', 'ring-primary-500');
+                    cardEl.classList.add('border-slate-200', 'dark:border-slate-700');
+                }
+                if (radioOrBorder) {
+                    radioOrBorder.innerHTML = '';
+                    radioOrBorder.classList.remove('border-primary-500');
+                    radioOrBorder.classList.add('border-slate-300', 'dark:border-slate-600');
+                }
+            });
+
+            const activeEl = document.getElementById(`combo-card-${optionKey}`) || document.getElementById(`item-row-${optionKey}`);
+            const activeRadio = document.getElementById(`radio-${optionKey}`);
+
+            if (activeEl) {
+                activeEl.classList.add('border-primary-500', 'ring-1', 'ring-primary-500');
+                activeEl.classList.remove('border-slate-200', 'dark:border-slate-700');
+            }
+
+            if (activeRadio) {
+                activeRadio.classList.add('border-primary-500');
+                activeRadio.classList.remove('border-slate-300', 'dark:border-slate-600');
+                activeRadio.innerHTML = '<div class="w-2.5 h-2.5 bg-primary-500 rounded-full"></div>';
+            }
+
+            calculateTotal();
+        }
+
+        function updatePricingDOM() {
+            const currentData = getActivePricingBlock();
+            
+            document.getElementById('price-combo2').innerText = `$${currentData.combo2.price} USD`;
+            document.getElementById('price-combo4').innerText = `$${currentData.combo4.price} USD`;
+            document.getElementById('price-comboAds').innerText = `$${currentData.comboAds.price} USD`;
+
+            document.getElementById('title-combo2').innerText = currentData.combo2.title;
+            document.getElementById('desc-combo2').innerText = currentData.combo2.desc;
+
+            document.getElementById('title-combo4').innerText = currentData.combo4.title;
+            document.getElementById('desc-combo4').innerText = currentData.combo4.desc;
+
+            document.getElementById('title-comboAds').innerText = currentData.comboAds.title;
+            document.getElementById('desc-comboAds').innerText = currentData.comboAds.desc;
+
+            if (currentData.combo7) {
+                document.getElementById('price-combo7').innerText = `$${currentData.combo7.price} USD`;
+                document.getElementById('title-combo7').innerText = currentData.combo7.title;
+                document.getElementById('desc-combo7').innerText = currentData.combo7.desc;
+            }
+
+            document.getElementById('price-individual-video').innerText = `$${currentData.video.price} USD`;
+            document.getElementById('price-individual-stories').innerText = `$${currentData.stories.price} USD`;
+            document.getElementById('price-individual-photo').innerText = `$${currentData.photo.price} USD`;
+
+            document.getElementById('title-individual-video').innerText = currentData.video.title;
+            document.getElementById('desc-individual-video').innerText = currentData.video.desc;
+
+            document.getElementById('title-individual-stories').innerText = currentData.stories.title;
+            document.getElementById('desc-individual-stories').innerText = currentData.stories.desc;
+
+            document.getElementById('title-individual-photo').innerText = currentData.photo.title;
+            document.getElementById('desc-individual-photo').innerText = currentData.photo.desc;
+        }
+
+        function calculateTotal() {
+            const currentData = getActivePricingBlock()[currentSelection];
+            let total = currentData.price;
+
+            let descText = currentData.desc;
+            if (currentContentType === 'redes') {
+                descText = descText.replace("1 perfil (IG o TikTok)", `${selectedPlatform === 'instagram' ? 'Instagram' : 'TikTok'}`);
+                descText = descText.replace("1 perfil", `${selectedPlatform === 'instagram' ? 'Instagram' : 'TikTok'}`);
+                descText = descText.replace("1 red", `${selectedPlatform === 'instagram' ? 'Instagram' : 'TikTok'}`);
+            }
+
+            document.getElementById('summary-main-item').innerHTML = `
+                <div>
+                    <span class="font-bold text-sm block">${currentData.title}</span>
+                    <span class="text-xs text-slate-400 block">${descText}</span>
+                </div>
+            `;
+            document.getElementById('summary-main-price').innerText = `$${total} USD`;
+
+            const whitelistingSelect = document.getElementById('extra-whitelisting');
+            const whitelistingStatusBadge = document.getElementById('whitelisting-status-badge');
+            
+            if (currentData.hasBuiltInAds) {
+                whitelistingSelect.value = "0";
+                whitelistingSelect.classList.add('hidden');
+                whitelistingStatusBadge.classList.remove('hidden');
+                whitelistingStatusBadge.innerText = `¡Incluido (${currentData.adsDays} días)!`;
+            } else {
+                whitelistingSelect.classList.remove('hidden');
+                whitelistingStatusBadge.classList.add('hidden');
+            }
+
+            const whitelistingVal = whitelistingSelect.value;
+            let whitelistingCost = 0;
+
+            if (!currentData.hasBuiltInAds && whitelistingVal !== "0") {
+                const rate = whitelistingVal === "30" ? 0.10 : 0.20;
+                whitelistingCost = Math.round(currentData.price * rate);
+                total += whitelistingCost;
+            }
+
+            const extrasSection = document.getElementById('summary-extras-section');
+            const extrasList = document.getElementById('summary-extras-list');
+            extrasList.innerHTML = '';
+
+            if (currentData.hasBuiltInAds || whitelistingCost > 0) {
+                extrasSection.classList.remove('hidden');
+                
+                if (currentData.hasBuiltInAds) {
+                    const el = document.createElement('div');
+                    el.className = 'flex justify-between items-center text-xs';
+                    el.innerHTML = `<span>Derechos de Publicidad (${currentData.adsDays} días)</span><span class="font-semibold text-green-400">¡INCLUIDO!</span>`;
+                    extrasList.appendChild(el);
+                } else if (whitelistingCost > 0) {
+                    const el = document.createElement('div');
+                    el.className = 'flex justify-between items-center text-xs';
+                    el.innerHTML = `<span>Whitelisting (Ads - ${whitelistingVal} días)</span><span class="font-semibold text-slate-300">+$${whitelistingCost} USD</span>`;
+                    extrasList.appendChild(el);
+                }
+            } else {
+                extrasSection.classList.add('hidden');
+            }
+
+            document.getElementById('total-price').innerText = `$${total} USD`;
+        }
+
+        function copyQuote() {
+            const platformText = currentContentType === 'redes' ? ` (Publicado en ${selectedPlatform === 'instagram' ? 'Instagram' : 'TikTok'})` : ' (UGC - Uso de Marca)';
+            const selectionData = getActivePricingBlock()[currentSelection];
+            let quoteText = `Hola Natalia, he cotizado los siguientes servicios en tu portafolio interactivo:\n\n`;
+            quoteText += `Esquema: ${currentContentType === 'ugc' ? '🎥 Contenido UGC' : '📣 Publicar en mis Redes'}${platformText}\n`;
+            quoteText += `Entregable: ${selectionData.title} ($${selectionData.price} USD)\n`;
+            
+            if (selectionData.hasBuiltInAds) {
+                quoteText += `- Derechos de Paid Ads / Whitelisting por ${selectionData.adsDays} días (¡Incluido en este Combo publicitario de alto valor!)\n`;
+            } else {
+                const whitelistingVal = document.getElementById('extra-whitelisting').value;
+                if (whitelistingVal !== "0") {
+                    const rate = whitelistingVal === "30" ? 0.10 : 0.20;
+                    const whitelistingCost = Math.round(selectionData.price * rate);
+                    quoteText += `- Derechos de Paid Ads / Whitelisting por ${whitelistingVal} días (+$${whitelistingCost} USD)\n`;
+                }
+            }
+
+            quoteText += `\nTotal Estimado: ${document.getElementById('total-price').innerText}`;
+            
+            // Usar fallback compatible con navegadores embebidos
+            const tempInput = document.createElement("textarea");
+            tempInput.value = quoteText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const msg = document.getElementById('copy-message');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Seleccionar combo por defecto
+        selectPricingOption('combo4');
+        setContentType('ugc');
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contact-form').reset();
+            const successMsg = document.getElementById('form-success-msg');
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 8000);
+        }
+
+        /* ========================================================
+           GRÁFICOS DE CHART.JS (Edad únicamente)
+           ======================================================== */
+        const isDark = document.documentElement.classList.contains('dark');
+        const labelColor = isDark ? '#94a3b8' : '#475569';
+
+        const ctxAge = document.getElementById('ageChart').getContext('2d');
+        const ageChart = new Chart(ctxAge, {
+            type: 'bar',
+            data: {
+                labels: ['13-17', '18-24', '25-34', '35-44', '45+'],
+                datasets: [{
+                    label: 'Porcentaje %',
+                    data: [4, 48, 38, 8, 2],
+                    backgroundColor: 'rgba(244, 63, 94, 0.85)',
+                    borderRadius: 8,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { grid: { display: false }, ticks: { color: labelColor } },
+                    x: { grid: { display: false }, ticks: { color: labelColor } }
+                }
+            }
+        });
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentDark = document.documentElement.classList.contains('dark');
+            const newLabelColor = currentDark ? '#94a3b8' : '#475569';
+            
+            ageChart.options.scales.x.ticks.color = newLabelColor;
+            ageChart.options.scales.y.ticks.color = newLabelColor;
+            ageChart.update();
+        });
+    </script>
+</body>
+</html>
